@@ -1,5 +1,5 @@
 #!/bin/bash
-read -p "Link der Liste: " starturl
+read -p "Full URL of the IMDb List: " starturl
 while true
 do
 nexturl=$(lynx -dump "$starturl" | grep -o 'https://www.imdb.com/search/title/.*=adv_nxt' | head -1)
